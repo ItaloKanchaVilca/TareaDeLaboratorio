@@ -140,11 +140,11 @@ int main()
 			mayor = numero[i];
 		}
 	}
-	
+
 	cout << "El mayor elemento de los ingresados es: " << mayor << endl;
-	
+
 	menor = mayor;
-	
+
 	for (int i = 0; i < n; i++)
 	{
 		if (menor>numero[i])
@@ -161,26 +161,26 @@ int main()
 */
 
 //5.15 dibujar triangulos con asteriscos
-
+/*
 int main()
 {
 	int altura;
-	
+
 	cout << "Inserte la altura de mi triangulo: ";
 	cin >> altura;
 
 	//forma ascendente
 	for (int i = 1; i <= altura; i++)
 	{
-		for (int j = 1; j <=i; j++)
+		for (int j = 1; j <= i; j++)
 		{
 			cout << "*";
 		}
 		cout << "\n";
 	}
-	
+
 	cout << "\n";
-	
+
 	//forma descendemte
 	for (int i = altura; i > 0; i--)
 	{
@@ -197,10 +197,10 @@ int main()
 
 	return 0;
 }
+*/
 
+//5.19 calcular la aproximacion del valor de pi 
 
-//5.19 calcular el valor de pi varias veces
-/*
 int main()
 {
 	long long i, n;
@@ -221,7 +221,7 @@ int main()
 
 
 }
-*/
+
 
 //5.29
 
@@ -276,5 +276,7 @@ int main()
 
 
 //6.41
+
+
 
 
