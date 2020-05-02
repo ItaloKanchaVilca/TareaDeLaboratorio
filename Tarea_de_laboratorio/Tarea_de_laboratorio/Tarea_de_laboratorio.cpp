@@ -1,10 +1,13 @@
 
 #include <iostream>
+#include <cmath>
+#include <iomanip>
 using namespace std;
 
 //CAPITULO 4
 
-//4.26
+//4.26 dibujar un cuadrado con asteriscos
+/*
 int main()
 {
 	int n;
@@ -25,8 +28,8 @@ int main()
 				cout << " ";
 			}
 			cout << "*";
+			cout << "\r\n";
 		}
-		cout << "\r\n";
 		for (int i = 0; i < n; i++)
 		{
 			cout << "*";
@@ -37,18 +40,75 @@ int main()
 		cout << "*";
 	}
 	return 0;
+}
+*/
 
+//4.27 saber si es o mo un numero capicua
+/*
+int main()
+{
+	int numero, aux, resto, numeroI = 0;
+	cout << "dame un numero: ";
+	cin >> numero;
+	aux = numero;
+	while (aux > 0)
+	{
+		resto = aux % 10;
+		aux = aux / 10;
+		numeroI = numeroI * 10 + resto;
+	}
+	if (numero == numeroI)
+	{
+		cout << numero << " es capicua" << endl;
+	}
+	else
+	{
+		cout << numero << " no es capicua" << endl;
+	}
+	return 0;
+}
+*/
 
-//4.27
+//4.28 numero binario a decimal con vectores
+/*
+int main()
+{
+	int numero, digito, posicion = 0, resultado = 0;
+	long vector[] = { 1,2,4,8,16,32,64,128,256,512,1024 };
+	cout << "inserte un numero binario: ";
+	cin >> numero;
+	while (numero > 0)
+	{
+		digito = numero % 10;
+		if (digito == 1)
+		{
+			resultado = resultado + vector[posicion];
+		}
+		posicion++;
+		numero = numero / 10;
+	}
+	cout << " El numero convertido en decimal es: " << resultado << endl;
+	return 0;
+}
+*/
 
-
-
-//4.28
-
-
-
-//4.30
-
+//4.30 sucesion fibonacci infinita 
+/*
+int main()
+{
+	int numero = 0, numero1 = 0, numero2 = 1, i = 1;
+	cout << "sucesion de fibonacci: " << endl;
+	while (i)
+	{
+		numero1 = numero2;
+		numero2 = numero;
+		numero = numero1 + numero2;
+		i++;
+		cout << numero << " ";
+	}
+	return 0;
+}
+*/
 
 
 
@@ -57,16 +117,110 @@ int main()
 
 //CAPITULO 5
 
-//5.11
+//5.11 encontrar el valor mas pequeño 
+/*
+int main()
+{
+	int numero[100], n,mayor=0,menor;
+
+	cout << "inserte el numero de elementos para extraer el menor: ";
+	cin >> n;
+
+
+	for (int i = 0; i < n; i++)
+	{
+		cout << i + 1 << ". inserte un numero:  " << endl;
+		cin >> numero[i];
+
+		if (mayor < numero[i])
+		{
+			mayor = numero[i];
+		}
+	}
+	
+	cout << "El mayor elemento de los ingresados es: " << mayor << endl;
+	
+	menor = mayor;
+	
+	for (int i = 0; i < n; i++)
+	{
+		if (menor>numero[i])
+		{
+			menor = numero[i];
+		}
+	}
+
+	cout << "El menor elemento de los ingresados es: " << menor << endl;
+
+
+	return 0;
+}
+*/
+
+//5.15 dibujar triangulos con asteriscos
+/*
+int main()
+{
+	int altura;
+	
+	cout << "Inserte la altura de mi triangulo: ";
+	cin >> altura;
+
+	//forma ascendente
+	for (int i = 1; i <= altura; i++)
+	{
+		for (int j = 1; j <=i; j++)
+		{
+			cout << "*";
+		}
+		cout << "\n";
+	}
+	
+	cout << "\n";
+	
+	//forma descendemte
+	for (int i = altura; i > 0; i--)
+	{
+		for (int j = 0; j < i; j++)
+		{
+			cout << "*";
+		}
+		cout << "\n";
+	}
+
+	cout << "\n";
+
+	//forma ascendente por la derecha
+
+	return 0;
+}
+*/
+
+//5.19 calcular el valor de pi varias veces
+
+int main()
+{
+	long long i, n;
+	long double s, pi;
+	
+	cout << "Ingrese el valor de n: ";
+	cin >> n;
+
+	s = 0;
+
+	for (i = 0; i < n; i++)
+	{
+		s = s + sqrt(n * n - i * i);
+	}
+	pi = (4 * s) / (n * n);
+
+	cout << "pi vale aproximadamente: " << pi << endl;
 
 
 
-//5.15
 
 
-
-//5.19
-
+}
 
 
 //5.29
